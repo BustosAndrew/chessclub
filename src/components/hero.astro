@@ -10,9 +10,9 @@ import { Icon } from "astro-icon";
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
       src={heroImage}
-      alt="Astronaut in the air"
+      alt="UOP Chess Club Logo"
       widths={[200, 400, 600]}
-      aspectRatio="4:3"
+      aspectRatio="1:1"
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
       format="avif"
@@ -21,33 +21,26 @@ import { Icon } from "astro-icon";
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      UOP Chess Club
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+      Welcome to the UOP Chess Club! We are a group of chess enthusiasts who
+      meet weekly to play chess and have fun. We also compete with other
+      colleges to put our chess skills to the test.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+      <Link href="/events" class="flex gap-1 items-center justify-center">
+        <Icon class="text-white w-5 h-5" name="ion:calendar-outline" />
 
-        Download for Free
+        Our Events
       </Link>
       <Link
         size="lg"
         style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        href="/contact"
+        class="flex gap-1 items-center justify-center">
+        <Icon class="text-black w-4 h-4" name="ic:outline-email" />
+        Contact Us
       </Link>
     </div>
   </div>

@@ -10,7 +10,12 @@ import Button from "./ui/button.astro";
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+  <input
+    type="hidden"
+    name="access_key"
+    value="0dc4e235-1b46-4c10-bb1a-9e6dbcc05e39
+"
+  />
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
@@ -52,6 +57,8 @@ import Button from "./ui/button.astro";
       Please enter your message.
     </div>
   </div>
+  <div class="h-captcha" data-captcha="true"></div>
+  <br />
   <Button type="submit" size="lg" block>Send Message</Button>
   <div id="result" class="mt-3 text-center"></div>
 </form>
@@ -76,6 +83,7 @@ import Button from "./ui/button.astro";
   }
 </style>
 
+<script src="https://web3forms.com/client/script.js" async defer></script>
 <script is:inline>
   const form = document.getElementById("form");
   const result = document.getElementById("result");

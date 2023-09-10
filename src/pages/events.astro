@@ -2,9 +2,9 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import PricingCard from "@components/pricing.astro";
+import PricingCard from "@components/events.astro";
 
-const pricing = [
+const events = [
   {
     name: "Personal",
     price: "Free",
@@ -64,17 +64,17 @@ const pricing = [
 ];
 ---
 
-<Layout title="Pricing">
+<Layout title="Events">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="title">Events</Fragment>
       <Fragment slot="desc">
         Simple & Predictable pricing. No Surprises.
       </Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <PricingCard plan={item} />)}
+      {events.map((item) => <PricingCard plan={item} />)}
     </div>
   </Container>
 </Layout>
