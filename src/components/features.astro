@@ -1,6 +1,8 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import heroImage from "assets/hero.png";
+import { Picture } from "@astrojs/image/components";
 
 const features = [
   {
@@ -42,17 +44,41 @@ const features = [
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Never played chess before?
-  </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Not a problem! We welcome all skill levels. We also have members with a lot
-    of chess playing experience to show you the ropes.
-  </p>
+<div class="mt-16 md:mt-0 px-10">
+  <h2 class="text-3xl lg:text-4xl font-bold lg:tracking-tight">Hello there!</h2>
+  <div
+    class="flex flex-col lg:flex-row lg:justify-left lg:justify-between items-start">
+    <p class="text-lg mt-4 text-slate-600 sm:w-full lg:w-2/3">
+      My name is Zhao Do and I am the current President of the Chess Club at the
+      University of the Pacific. I would like to formally welcome you all to our
+      new website! We created this website in hopes of better connecting with
+      our members and our community. My goal is to manifest the club’s visions
+      and ambitions, aiming to spread chess culture to the Stockton community as
+      well as beyond that. But on top of that, I want to leave behind a
+      resonating impact that ultimately revolves around the development of our
+      members on an individual level. Whether this means becoming a greater
+      leader in their community or learning to love themselves more, my focus is
+      satisfaction and contentment in oneself. <br /><br /> I hope for the UOP Chess
+      Club to be an outlet, a place of outreach, and a safe space for people to discover
+      their true potential. If you have any questions or ideas, feel free to contact
+      me!
+      <br /><br />With love, <br />Zhao Do <br /><span>2023-2024 President</span
+      >
+    </p>
+    <Picture
+      src={heroImage}
+      alt="UOP Chess Club Logo"
+      widths={[200, 400, 600]}
+      aspectRatio="5:4"
+      sizes="(max-width: 800px) 100vw, 400px"
+      loading="eager"
+      format="avif"
+      class="mt-3 lg:mt-0"
+    />
+  </div>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<!-- <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 px-10">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
@@ -66,4 +92,4 @@ const features = [
       </div>
     ))
   }
-</div>
+</div> -->
