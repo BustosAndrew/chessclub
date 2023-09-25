@@ -2,53 +2,22 @@
 // @ts-ignore
 import { Icon } from "astro-icon";
 import heroImage from "assets/hero.png";
+import img1 from "assets/IMG_3678.jpg";
+import img2 from "assets/IMG_3681.jpg";
+import img3 from "assets/IMG_3682.jpg";
+import img4 from "assets/IMG_3684.jpg";
+import img5 from "assets/IMG_3679.jpg";
+import img6 from "assets/IMG_3693.jpg";
 import { Picture } from "@astrojs/image/components";
-
-const features = [
-  {
-    title: "Bring Your Own Framework",
-    description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
-  },
-  {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
-  },
-  {
-    title: "On-Demand Components",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
-  },
-  {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
-  },
-];
 ---
 
-<div class="mt-16 md:mt-0 px-10">
-  <h2 class="text-3xl lg:text-4xl font-bold lg:tracking-tight">Hello there!</h2>
+<div class="mt-16 md:mt-0 px-10 bg-black py-8">
+  <h2 class="text-3xl text-white lg:text-4xl font-bold lg:tracking-tight">
+    Hello there!
+  </h2>
   <div
     class="flex flex-col lg:flex-row lg:justify-left lg:justify-between items-start">
-    <p class="text-lg mt-4 text-slate-600 sm:w-full lg:w-2/3">
+    <p class="text-lg mt-4 text-slate-300 sm:w-full lg:w-2/3">
       My name is Zhao Do and I am the current President of the Chess Club at the
       University of the Pacific. I would like to formally welcome you all to our
       new website! We created this website in hopes of better connecting with
@@ -76,6 +45,66 @@ const features = [
       class="mt-3 lg:mt-0"
     />
   </div>
+</div>
+
+<div class="grid md:grid-cols-2">
+  <Picture
+    src={img1}
+    alt="UOP Chess Club Logo"
+    widths={[200, 400, 600]}
+    aspectRatio="2:1"
+    loading="eager"
+    format="avif"
+    class="w-full"
+  />
+  <Picture
+    src={img2}
+    alt="UOP Chess Club Logo"
+    widths={[200, 400, 600]}
+    aspectRatio="2:1"
+    sizes="(max-width: 600px) 100vw, 400px"
+    loading="eager"
+    format="avif"
+    class="w-full"
+  />
+  <Picture
+    src={img3}
+    alt="UOP Chess Club Logo"
+    widths={[200, 400, 600]}
+    aspectRatio="2:1"
+    loading="eager"
+    format="avif"
+    class="w-full"
+  />
+  <Picture
+    src={img4}
+    alt="UOP Chess Club Logo"
+    widths={[200, 400, 600]}
+    aspectRatio="2:1"
+    sizes="(max-width: 600px) 100vw, 400px"
+    loading="eager"
+    format="avif"
+    class="w-full"
+  />
+  <Picture
+    src={img5}
+    alt="UOP Chess Club Logo"
+    widths={[200, 400, 600]}
+    aspectRatio="2:1"
+    loading="eager"
+    format="avif"
+    class="w-full"
+  />
+  <Picture
+    src={img6}
+    alt="UOP Chess Club Logo"
+    widths={[200, 400, 600]}
+    aspectRatio="2:1"
+    sizes="(max-width: 600px) 100vw, 400px"
+    loading="eager"
+    format="avif"
+    class="w-full"
+  />
 </div>
 
 <!-- <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 px-10">
