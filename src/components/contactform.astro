@@ -13,8 +13,7 @@ import Button from "./ui/button.astro";
   <input
     type="hidden"
     name="access_key"
-    value="0dc4e235-1b46-4c10-bb1a-9e6dbcc05e39
-"
+    value="0dc4e235-1b46-4c10-bb1a-9e6dbcc05e39"
   />
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
@@ -91,6 +90,19 @@ import Button from "./ui/button.astro";
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     form.classList.add("was-validated");
+
+    const hCaptcha = form.querySelector("textarea[name=h-captcha-response]").value
+
+    if (result.classList.contains("text-red-500"))
+      result.classList.remove("text-red-500")
+
+    if (!hCaptcha) {
+      e.preventDefault();
+      result.classList.add("text-red-500");
+      result.innerHTML = "Please fill out captcha field."
+      return;
+    }
+
     if (!form.checkValidity()) {
       form.querySelectorAll(":invalid")[0].focus();
       return;
